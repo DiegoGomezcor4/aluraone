@@ -18,14 +18,18 @@
         pincel.clearRect(0,0,600,400);
     }
 
+    var x = 0;
 
-    for(var x = 20; x < 600; x++) {
+    function actualizarPantalla(){
+        limpiarPantalla();
         disenarCircunferencia(x,20,10);
-
+        x++
     }
+        
 
+    setInterval(actualizarPantalla,5);
     
-   
+    
 
 
 </script>
