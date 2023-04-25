@@ -5,6 +5,8 @@
     var pincel = pantalla.getContext("2d");
 
     var radio = 10;
+    var xAleatorio;
+    var yAleatorio;
 
     pincel.fillStyle = "grey";
     pincel.fillRect(0,0,600,400);
@@ -22,10 +24,11 @@
 
     var x = 0;
 
-    function actualizarPantalla(){
+    function actualizarPantalla(x,y){
         limpiarPantalla();
-        disenarCircunferencia(x,20,10);
-        x++
+        xAleatorio = sortearPosicion(600);
+        yAleatorio = sortearPosicion(400);
+        disenarObjetivo(xAleatorio,yAleatorio);
     }
 
     function disenarObjetivo(x,y) {
@@ -40,13 +43,28 @@
         return Math.floor(Math.random() * maximo);
     }
 
-    xAleatorio = sortearPosicion(600);
-    yAleatorio = sortearPosicion(400);
+    function disparar(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
 
-    disenarObjetivo(xAleatorio,yAleatorio);
+        if ((x < xAleatorio + radio) &&
+            (x > xAleatorio - radio) &&
+            (y < yAleatorio + radio) &&
+            (y > yAleatorio - radio)) {
 
-/*     setInterval(actualizarPantalla,5);
-     */
+                alert("Tiro certero");
+            }
+        else {
+            /* alert("tiro errado"); */
+        }
+    }
+    
+
+    pantalla.onclick = disparar;
+    
+
+   setInterval(actualizarPantalla,1000);
+     
     
 
 
