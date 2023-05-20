@@ -127,6 +127,7 @@ form label, form legend{
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
+    clear: left;
 }
 
 .principal p, .diferenciales {
@@ -139,6 +140,12 @@ form label, form legend{
 
 .principal em {
     font-style: italic;
+}
+
+.utencilios {
+    width: 120px;
+    margin: 0 5px 1px 50px;
+    float: left
 }
 
 .imagenDiferenciales {
