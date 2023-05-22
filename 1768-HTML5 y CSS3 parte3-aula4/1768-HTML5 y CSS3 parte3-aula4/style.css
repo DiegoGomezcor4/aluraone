@@ -91,10 +91,10 @@ footer{
     margin:20px;
 }
 
- /* main{
+main{
     width: 940px;
     margin: 0 auto;    
-}  */
+}
 
 form{
     margin: 40px 0;
@@ -115,39 +115,4 @@ form label, form legend{
 
 .checkbox{
     margin:20px 0;
-}
-
-/* css para nuestra home */
-
-.banner {
-    width: 100%;
-}
-
-.titulo-principal {
-    text-align: center;
-    font-size: 2em;
-    margin: 0 0 1em;
-    clear: left;
-}
-
-.principal p, .diferenciales {
-    margin: 0 50px 1em;
-}
-
-.principal strong {
-    font-weight: bold;
-}
-
-.principal em {
-    font-style: italic;
-}
-
-.utencilios {
-    width: 120px;
-    margin: 0 5px 1px 50px;
-    float: left
-}
-
-.imagenDiferenciales {
-    width: 60%;
 }
